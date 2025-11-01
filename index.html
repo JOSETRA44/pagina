@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolki - Control de Gastos con Voz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">💰 Kolki</div>
+            <ul>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#architecture">Arquitectura</a></li>
+                <li><a href="#usage">Uso</a></li>
+                <li><a href="#ux">UX</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Kolki</h1>
+                <p>Una aplicación Android moderna para el control de gastos personales con reconocimiento de voz offline.</p>
+                <a href="#" class="cta-button">Descargar App</a>
+            </div>
+            <div id="canvas-container"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="features">
+            <h2>🚀 Características Principales</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>📱 Funcionalidades Core</h3>
+                    <ul>
+                        <li><b>Registro rápido por voz:</b> Doble toque en botones de volumen.</li>
+                        <li><b>Registro manual:</b> Formulario intuitivo con categorías.</li>
+                        <li><b>Base de datos local:</b> Almacenamiento offline con SQLite/Room.</li>
+                        <li><b>Navegación por pestañas:</b> Gastos, Estadísticas y Perfiles.</li>
+                    </ul>
+                </div>
+                <div class="feature-item">
+                    <h3>🎤 Reconocimiento de Voz</h3>
+                    <ul>
+                        <li><b>Offline:</b> Usa la librería Vosk para funcionar sin internet.</li>
+                        <li><b>Formato natural:</b> "Comida, 25, almuerzo en la universidad".</li>
+                        <li><b>Categorías inteligentes:</b> Reconoce categorías comunes.</li>
+                        <li><b>Números en español:</b> Convierte "veinticinco" a 25.</li>
+                    </ul>
+                </div>
+                <div class="feature-item">
+                    <h3>📊 Estadísticas y Visualización</h3>
+                    <ul>
+                        <li><b>Totales por período:</b> Semanal, mensual, anual.</li>
+                        <li><b>Gastos por categoría:</b> Con barras de progreso.</li>
+                        <li><b>Gastos recientes:</b> Lista de últimos movimientos.</li>
+                        <li><b>Filtros y búsqueda:</b> Para encontrar gastos específicos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture">
+            <h2>🏗️ Arquitectura Técnica</h2>
+            <div class="architecture-content">
+                <div class="stack">
+                    <h3>🛠️ Stack Tecnológico</h3>
+                    <ul>
+                        <li><strong>Lenguaje:</strong> Kotlin</li>
+                        <li><strong>UI:</strong> Material Design 3 + View Binding</li>
+                        <li><strong>Base de datos:</strong> Room (SQLite)</li>
+                        <li><strong>Arquitectura:</strong> MVVM + Repository Pattern</li>
+                        <li><strong>Navegación:</strong> Navigation Component</li>
+                        <li><strong>Reconocimiento de voz:</strong> Vosk Android</li>
+                        <li><strong>Concurrencia:</strong> Kotlin Coroutines</li>
+                    </ul>
+                </div>
+                <div class="project-structure">
+                    <h3>📁 Estructura del Proyecto</h3>
+                    <pre><code>app/src/main/java/com/example/kolki/
+├── data/
+│   ├── Expense.kt
+│   ├── ExpenseDao.kt
+│   ├── ExpenseDatabase.kt
+│   └── Converters.kt
+├── repository/
+│   └── ExpenseRepository.kt
+├── ui/
+│   ├── expenses/
+│   ├── statistics/
+│   └── profile/
+├── speech/
+│   ├── VoiceRecognitionService.kt
+│   └── ExpenseVoiceParser.kt
+└── service/
+    └── VolumeKeyService.kt</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage">
+            <h2>🎯 Uso de la Aplicación</h2>
+            <div class="usage-steps">
+                <div class="step">
+                    <h3>📝 Registro Manual</h3>
+                    <p>Abre la app, completa el formulario (categoría, monto, comentario) y guarda.</p>
+                </div>
+                <div class="step">
+                    <h3>🎤 Registro por Voz</h3>
+                    <p>Presiona el botón "Por Voz" o haz doble toque en los botones de volumen y dicta el gasto.</p>
+                </div>
+                <div class="step">
+                    <h3>📊 Ver Estadísticas</h3>
+                    <p>Analiza tus gastos totales, por período y por categoría en la pestaña de estadísticas.</p>
+                </div>
+                 <div class="step">
+                    <h3>⚙️ Configuración</h3>
+                    <p>Activa/desactiva el reconocimiento de voz, cambia la moneda y exporta o limpia tus datos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ux">
+            <h2>🎨 Experiencia de Usuario (UX)</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>🎯 Diseño Intuitivo</h3>
+                    <ul>
+                        <li><b>Material Design 3:</b> Interfaz moderna y familiar.</li>
+                        <li><b>Navegación clara:</b> Bottom navigation con iconos descriptivos.</li>
+                        <li><b>Feedback visual:</b> Animaciones y estados de carga.</li>
+                        <li><b>Accesibilidad:</b> Soporte para lectores de pantalla.</li>
+                    </ul>
+                </div>
+                <div class="feature-item">
+                    <h3>🚀 Rendimiento</h3>
+                    <ul>
+                        <li><b>Base de datos local:</b> Acceso instantáneo sin internet.</li>
+                        <li><b>Reconocimiento offline:</b> No requiere conexión.</li>
+                        <li><b>Arquitectura eficiente:</b> MVVM con LiveData para UI reactiva.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="future-features">
+            <h2>🔮 Funcionalidades Futuras</h2>
+            <div class="feature-item">
+                <ul>
+                    <li>Sincronización en la nube</li>
+                    <li>Presupuestos y metas de gasto</li>
+                    <li>Gráficos avanzados y reportes</li>
+                    <li>Recordatorios de gastos</li>
+                    <li>Múltiples cuentas/carteras</li>
+                    <li>Modo oscuro</li>
+                    <li>Widget para pantalla de inicio</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="developer-setup">
+            <h2>🔧 Configuración de Desarrollo</h2>
+            <div class="architecture-content">
+                <div class="stack">
+                    <h3>📋 Requisitos</h3>
+                    <ul>
+                        <li>Android Studio Arctic Fox o superior</li>
+                        <li>SDK mínimo: API 26 (Android 8.0)</li>
+                        <li>SDK objetivo: API 36 (Android 15)</li>
+                        <li>Kotlin 2.0.21</li>
+                    </ul>
+                </div>
+                <div class="project-structure">
+                    <h3>🚀 Instalación</h3>
+                    <p>1. Clonar el repositorio.</p>
+                    <p>2. Abrir en Android Studio.</p>
+                    <p>3. Sincronizar el proyecto con Gradle.</p>
+                    <p>4. Ejecutar en un dispositivo o emulador.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>🐛 Solución de Problemas</h2>
+             <div class="feature-item">
+                <ul>
+                    <li><b>Reconocimiento de Voz No Funciona:</b> Verificar permisos de micrófono y descarga del modelo Vosk.</li>
+                    <li><b>Base de Datos Corrupta:</b> Usar la opción "Limpiar Datos" en el perfil o reinstalar la app.</li>
+                    <li><b>Rendimiento Lento:</b> Limpiar datos antiguos y verificar el espacio de almacenamiento.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <p>Este proyecto está bajo la Licencia MIT.</p>
+        <p>Desarrollado con ❤️ usando Android Studio y Kotlin.</p>
+        <p>&copy; 2024 Kolki. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
