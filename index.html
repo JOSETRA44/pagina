@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kolki - Control de Gastos con Voz</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,12 +19,12 @@
             </ul>
         </nav>
         <div class="hero">
+            <div id="smoke-effect"></div>
             <div class="hero-text">
-                <h1>Kolki</h1>
-                <p>Una aplicación Android moderna para el control de gastos personales con reconocimiento de voz offline.</p>
-                <a href="#" class="cta-button">Descargar App</a>
+                <h1>Kolki: Finanzas por Voz</h1>
+                <p>La forma más inteligente y fluida de gestionar tus finanzas personales. Di adiós a los registros manuales y deja que tu voz haga el trabajo.</p>
+                <a href="#" class="cta-button">Descargar la App</a>
             </div>
-            <div id="canvas-container"></div>
         </div>
     </header>
 
@@ -34,36 +34,22 @@
             <div class="features-grid">
                 <div class="feature-item">
                     <h3>📱 Funcionalidades Core</h3>
-                    <ul>
-                        <li><b>Registro rápido por voz:</b> Doble toque en botones de volumen.</li>
-                        <li><b>Registro manual:</b> Formulario intuitivo con categorías.</li>
-                        <li><b>Base de datos local:</b> Almacenamiento offline con SQLite/Room.</li>
-                        <li><b>Navegación por pestañas:</b> Gastos, Estadísticas y Perfiles.</li>
-                    </ul>
+                    <p>Diseñado para ser rápido y eficiente, Kolki te permite registrar gastos en segundos, ya sea con tu voz o a través de una interfaz limpia y minimalista. Todos tus datos se guardan de forma segura en tu dispositivo.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>🎤 Reconocimiento de Voz</h3>
-                    <ul>
-                        <li><b>Offline:</b> Usa la librería Vosk para funcionar sin internet.</li>
-                        <li><b>Formato natural:</b> "Comida, 25, almuerzo en la universidad".</li>
-                        <li><b>Categorías inteligentes:</b> Reconoce categorías comunes.</li>
-                        <li><b>Números en español:</b> Convierte "veinticinco" a 25.</li>
-                    </ul>
+                    <h3>🎤 Reconocimiento de Voz Offline</h3>
+                    <p>Gracias al poder de Vosk, Kolki entiende tus comandos de voz sin necesidad de internet. Dicta tus gastos de forma natural, y la app se encargará de categorizar y registrar cada detalle por ti.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>📊 Estadísticas y Visualización</h3>
-                    <ul>
-                        <li><b>Totales por período:</b> Semanal, mensual, anual.</li>
-                        <li><b>Gastos por categoría:</b> Con barras de progreso.</li>
-                        <li><b>Gastos recientes:</b> Lista de últimos movimientos.</li>
-                        <li><b>Filtros y búsqueda:</b> Para encontrar gastos específicos.</li>
-                    </ul>
+                    <h3>📊 Estadísticas Detalladas</h3>
+                    <p>Visualiza tus hábitos financieros con gráficos claros y reportes detallados. Filtra por fecha, categoría o palabra clave para entender a dónde va tu dinero y tomar el control de tus finanzas.</p>
                 </div>
             </div>
         </section>
 
         <section id="architecture">
-            <h2>🏗️ Arquitectura Técnica</h2>
+            <h2>🏗️ Arquitectura Técnica Robusta</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Kolki está construido sobre una arquitectura moderna, utilizando las mejores prácticas de desarrollo Android para garantizar un rendimiento excepcional y una experiencia de usuario fluida.</p>
             <div class="architecture-content">
                 <div class="stack">
                     <h3>🛠️ Stack Tecnológico</h3>
@@ -72,30 +58,17 @@
                         <li><strong>UI:</strong> Material Design 3 + View Binding</li>
                         <li><strong>Base de datos:</strong> Room (SQLite)</li>
                         <li><strong>Arquitectura:</strong> MVVM + Repository Pattern</li>
-                        <li><strong>Navegación:</strong> Navigation Component</li>
                         <li><strong>Reconocimiento de voz:</strong> Vosk Android</li>
-                        <li><strong>Concurrencia:</strong> Kotlin Coroutines</li>
                     </ul>
                 </div>
                 <div class="project-structure">
                     <h3>📁 Estructura del Proyecto</h3>
-                    <pre><code>app/src/main/java/com/example/kolki/
-├── data/
-│   ├── Expense.kt
-│   ├── ExpenseDao.kt
-│   ├── ExpenseDatabase.kt
-│   └── Converters.kt
-├── repository/
-│   └── ExpenseRepository.kt
-├── ui/
-│   ├── expenses/
-│   ├── statistics/
-│   └── profile/
-├── speech/
-│   ├── VoiceRecognitionService.kt
-│   └── ExpenseVoiceParser.kt
-└── service/
-    └── VolumeKeyService.kt</code></pre>
+                    <pre><code>app/src/main/
+├── data/ (Modelos, DAO, Room)
+├── repository/ (Gestiona datos)
+├── ui/ (Fragments y ViewModels)
+├── speech/ (Lógica de voz)
+└── service/ (Servicios en segundo plano)</code></pre>
                 </div>
             </div>
         </section>
@@ -105,90 +78,45 @@
             <div class="usage-steps">
                 <div class="step">
                     <h3>📝 Registro Manual</h3>
-                    <p>Abre la app, completa el formulario (categoría, monto, comentario) y guarda.</p>
+                    <p>Abre la pestaña de "Gastos", llena los campos de categoría, monto y comentario, y presiona "Guardar". Así de simple.</p>
                 </div>
                 <div class="step">
                     <h3>🎤 Registro por Voz</h3>
-                    <p>Presiona el botón "Por Voz" o haz doble toque en los botones de volumen y dicta el gasto.</p>
+                    <p>Activa el reconocimiento con un doble toque en los botones de volumen. Di "Comida, 25, almuerzo" y Kolki lo registrará al instante.</p>
                 </div>
                 <div class="step">
                     <h3>📊 Ver Estadísticas</h3>
-                    <p>Analiza tus gastos totales, por período y por categoría en la pestaña de estadísticas.</p>
+                    <p>Navega a la pestaña de "Estadísticas" para ver un desglose completo de tus finanzas y optimizar tus ahorros.</p>
                 </div>
                  <div class="step">
                     <h3>⚙️ Configuración</h3>
-                    <p>Activa/desactiva el reconocimiento de voz, cambia la moneda y exporta o limpia tus datos.</p>
+                    <p>Ve a "Perfil" para personalizar tu experiencia, cambiar la moneda, y exportar tus datos en formato CSV con un solo toque.</p>
                 </div>
             </div>
         </section>
 
         <section id="ux">
-            <h2>🎨 Experiencia de Usuario (UX)</h2>
+            <h2>🎨 Experiencia de Usuario Superior</h2>
             <div class="features-grid">
                 <div class="feature-item">
                     <h3>🎯 Diseño Intuitivo</h3>
-                    <ul>
-                        <li><b>Material Design 3:</b> Interfaz moderna y familiar.</li>
-                        <li><b>Navegación clara:</b> Bottom navigation con iconos descriptivos.</li>
-                        <li><b>Feedback visual:</b> Animaciones y estados de carga.</li>
-                        <li><b>Accesibilidad:</b> Soporte para lectores de pantalla.</li>
-                    </ul>
+                    <p>Con una interfaz basada en Material Design 3, Kolki ofrece una experiencia visualmente atractiva y fácil de usar. La navegación es intuitiva, y cada interacción está diseñada para ser clara y satisfactoria.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>🚀 Rendimiento</h3>
-                    <ul>
-                        <li><b>Base de datos local:</b> Acceso instantáneo sin internet.</li>
-                        <li><b>Reconocimiento offline:</b> No requiere conexión.</li>
-                        <li><b>Arquitectura eficiente:</b> MVVM con LiveData para UI reactiva.</li>
-                    </ul>
+                    <h3>🚀 Rendimiento Excepcional</h3>
+                    <p>La arquitectura nativa y el almacenamiento local garantizan que Kolki sea increíblemente rápido. El reconocimiento de voz offline asegura que puedas registrar gastos en cualquier momento y lugar, sin demoras.</p>
                 </div>
             </div>
         </section>
 
         <section id="future-features">
-            <h2>🔮 Funcionalidades Futuras</h2>
+            <h2>🔮 Próximas Funcionalidades</h2>
             <div class="feature-item">
                 <ul>
-                    <li>Sincronización en la nube</li>
-                    <li>Presupuestos y metas de gasto</li>
-                    <li>Gráficos avanzados y reportes</li>
-                    <li>Recordatorios de gastos</li>
-                    <li>Múltiples cuentas/carteras</li>
-                    <li>Modo oscuro</li>
-                    <li>Widget para pantalla de inicio</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="developer-setup">
-            <h2>🔧 Configuración de Desarrollo</h2>
-            <div class="architecture-content">
-                <div class="stack">
-                    <h3>📋 Requisitos</h3>
-                    <ul>
-                        <li>Android Studio Arctic Fox o superior</li>
-                        <li>SDK mínimo: API 26 (Android 8.0)</li>
-                        <li>SDK objetivo: API 36 (Android 15)</li>
-                        <li>Kotlin 2.0.21</li>
-                    </ul>
-                </div>
-                <div class="project-structure">
-                    <h3>🚀 Instalación</h3>
-                    <p>1. Clonar el repositorio.</p>
-                    <p>2. Abrir en Android Studio.</p>
-                    <p>3. Sincronizar el proyecto con Gradle.</p>
-                    <p>4. Ejecutar en un dispositivo o emulador.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="troubleshooting">
-            <h2>🐛 Solución de Problemas</h2>
-             <div class="feature-item">
-                <ul>
-                    <li><b>Reconocimiento de Voz No Funciona:</b> Verificar permisos de micrófono y descarga del modelo Vosk.</li>
-                    <li><b>Base de Datos Corrupta:</b> Usar la opción "Limpiar Datos" en el perfil o reinstalar la app.</li>
-                    <li><b>Rendimiento Lento:</b> Limpiar datos antiguos y verificar el espacio de almacenamiento.</li>
+                    <li>Sincronización en la nube para copias de seguridad</li>
+                    <li>Creación de presupuestos y metas de ahorro</li>
+                    <li>Gráficos avanzados y reportes personalizables</li>
+                    <li>Widget para un acceso aún más rápido</li>
                 </ul>
             </div>
         </section>
