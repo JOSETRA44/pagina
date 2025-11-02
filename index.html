@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kolki - Control de Gastos con Voz</title>
+    <meta name="description" content="Kolki es una aplicación Android para el control de gastos personales con reconocimiento de voz offline.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Navegación principal">
             <div class="logo">💰 Kolki</div>
             <ul>
                 <li><a href="#features">Características</a></li>
@@ -18,52 +19,52 @@
                 <li><a href="#ux">UX</a></li>
             </ul>
         </nav>
-        <div class="hero">
-            <div id="smoke-effect"></div>
+        <div class="hero" role="banner">
+            <div id="smoke-effect" aria-hidden="true"></div>
             <div class="hero-text">
                 <h1>Kolki: Finanzas por Voz</h1>
                 <p>La forma más inteligente y fluida de gestionar tus finanzas personales. Di adiós a los registros manuales y deja que tu voz haga el trabajo.</p>
-                <a href="#" class="cta-button">Descargar la App</a>
+                <a href="#" class="cta-button" role="button">Descargar la App</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="features">
-            <h2>🚀 Características Principales</h2>
+        <section id="features" aria-labelledby="features-heading">
+            <h2 id="features-heading">🚀 Características que te Empoderan</h2>
             <div class="features-grid">
                 <div class="feature-item">
                     <h3>📱 Funcionalidades Core</h3>
-                    <p>Diseñado para ser rápido y eficiente, Kolki te permite registrar gastos en segundos, ya sea con tu voz o a través de una interfaz limpia y minimalista. Todos tus datos se guardan de forma segura en tu dispositivo.</p>
+                    <p>Registra gastos en segundos con una interfaz limpia y minimalista. Todos tus datos se almacenan de forma segura y privada en tu dispositivo, dándote control total sin depender de la nube.</p>
                 </div>
                 <div class="feature-item">
                     <h3>🎤 Reconocimiento de Voz Offline</h3>
-                    <p>Gracias al poder de Vosk, Kolki entiende tus comandos de voz sin necesidad de internet. Dicta tus gastos de forma natural, y la app se encargará de categorizar y registrar cada detalle por ti.</p>
+                    <p>Gracias a la tecnología de Vosk, Kolki procesa tus comandos de voz sin necesidad de internet. Dicta gastos como "Comida, 25, almuerzo" y la app lo entenderá al instante, estés donde estés.</p>
                 </div>
                 <div class="feature-item">
                     <h3>📊 Estadísticas Detalladas</h3>
-                    <p>Visualiza tus hábitos financieros con gráficos claros y reportes detallados. Filtra por fecha, categoría o palabra clave para entender a dónde va tu dinero y tomar el control de tus finanzas.</p>
+                    <p>Toma el control de tus finanzas con gráficos y reportes interactivos. Filtra por fecha, categoría o palabra clave para analizar tus hábitos y encontrar nuevas oportunidades de ahorro.</p>
                 </div>
             </div>
         </section>
 
-        <section id="architecture">
-            <h2>🏗️ Arquitectura Técnica Robusta</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Kolki está construido sobre una arquitectura moderna, utilizando las mejores prácticas de desarrollo Android para garantizar un rendimiento excepcional y una experiencia de usuario fluida.</p>
+        <section id="architecture" aria-labelledby="architecture-heading">
+            <h2 id="architecture-heading">🏗️ Arquitectura Técnica Robusta</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Kolki está construido sobre una arquitectura moderna y nativa de Android, garantizando un rendimiento excepcional, seguridad y una experiencia de usuario fluida y reactiva.</p>
             <div class="architecture-content">
                 <div class="stack">
-                    <h3>🛠️ Stack Tecnológico</h3>
+                    <h3>🛠️ Stack Tecnológico de Vanguardia</h3>
                     <ul>
                         <li><strong>Lenguaje:</strong> Kotlin</li>
-                        <li><strong>UI:</strong> Material Design 3 + View Binding</li>
+                        <li><strong>UI:</strong> Material Design 3 y View Binding</li>
                         <li><strong>Base de datos:</strong> Room (SQLite)</li>
                         <li><strong>Arquitectura:</strong> MVVM + Repository Pattern</li>
-                        <li><strong>Reconocimiento de voz:</strong> Vosk Android</li>
+                        <li><strong>Reconocimiento de voz:</strong> Vosk</li>
                     </ul>
                 </div>
                 <div class="project-structure">
-                    <h3>📁 Estructura del Proyecto</h3>
-                    <pre><code>app/src/main/
+                    <h3>📁 Estructura del Proyecto Optimizada</h3>
+                    <pre aria-label="Estructura de carpetas del proyecto"><code>app/src/main/
 ├── data/ (Modelos, DAO, Room)
 ├── repository/ (Gestiona datos)
 ├── ui/ (Fragments y ViewModels)
@@ -73,63 +74,64 @@
             </div>
         </section>
 
-        <section id="usage">
-            <h2>🎯 Uso de la Aplicación</h2>
+        <section id="usage" aria-labelledby="usage-heading">
+            <h2 id="usage-heading">🎯 Tan Fácil como Hablar</h2>
             <div class="usage-steps">
                 <div class="step">
                     <h3>📝 Registro Manual</h3>
-                    <p>Abre la pestaña de "Gastos", llena los campos de categoría, monto y comentario, y presiona "Guardar". Así de simple.</p>
+                    <p>Abre la app, completa los campos de categoría, monto y comentario, y presiona "Guardar". Ideal para cuando necesitas añadir detalles específicos.</p>
                 </div>
                 <div class="step">
                     <h3>🎤 Registro por Voz</h3>
-                    <p>Activa el reconocimiento con un doble toque en los botones de volumen. Di "Comida, 25, almuerzo" y Kolki lo registrará al instante.</p>
+                    <p>Activa el reconocimiento con un doble toque en los botones de volumen. Di "Comida, 25, almuerzo" y Kolki lo registrará al instante, sin que tengas que abrir la app.</p>
                 </div>
                 <div class="step">
                     <h3>📊 Ver Estadísticas</h3>
-                    <p>Navega a la pestaña de "Estadísticas" para ver un desglose completo de tus finanzas y optimizar tus ahorros.</p>
+                    <p>Navega a la pestaña de "Estadísticas" para ver un desglose completo de tus finanzas y descubre patrones en tus gastos.</p>
                 </div>
                  <div class="step">
-                    <h3>⚙️ Configuración</h3>
-                    <p>Ve a "Perfil" para personalizar tu experiencia, cambiar la moneda, y exportar tus datos en formato CSV con un solo toque.</p>
+                    <h3>⚙️ Personalización</h3>
+                    <p>Ve a "Perfil" para personalizar tu experiencia, cambiar la moneda (Soles, Dólares, Euros), y exportar tus datos en formato CSV con un solo toque.</p>
                 </div>
             </div>
         </section>
 
-        <section id="ux">
-            <h2>🎨 Experiencia de Usuario Superior</h2>
+        <section id="ux" aria-labelledby="ux-heading">
+            <h2 id="ux-heading">🎨 Experiencia de Usuario Superior</h2>
             <div class="features-grid">
                 <div class="feature-item">
-                    <h3>🎯 Diseño Intuitivo</h3>
-                    <p>Con una interfaz basada en Material Design 3, Kolki ofrece una experiencia visualmente atractiva y fácil de usar. La navegación es intuitiva, y cada interacción está diseñada para ser clara y satisfactoria.</p>
+                    <h3>🎯 Diseño Intuitivo y Moderno</h3>
+                    <p>Con una interfaz basada en Material Design 3, Kolki ofrece una experiencia visualmente atractiva y fácil de usar. La navegación es intuitiva, y cada interacción está diseñada para ser clara, satisfactoria y accesible.</p>
                 </div>
                 <div class="feature-item">
                     <h3>🚀 Rendimiento Excepcional</h3>
-                    <p>La arquitectura nativa y el almacenamiento local garantizan que Kolki sea increíblemente rápido. El reconocimiento de voz offline asegura que puedas registrar gastos en cualquier momento y lugar, sin demoras.</p>
+                    <p>La arquitectura nativa y el almacenamiento local garantizan que Kolki sea increíblemente rápido. El reconocimiento de voz offline asegura que puedas registrar gastos en cualquier momento y lugar, sin demoras ni consumo de datos.</p>
                 </div>
             </div>
         </section>
 
-        <section id="future-features">
-            <h2>🔮 Próximas Funcionalidades</h2>
+        <section id="future-features" aria-labelledby="future-features-heading">
+            <h2 id="future-features-heading">🔮 Próximas Funcionalidades</h2>
             <div class="feature-item">
+                <p>Estamos comprometidos con la mejora continua de Kolki. Algunas de las funcionalidades que estamos desarrollando incluyen:</p>
                 <ul>
                     <li>Sincronización en la nube para copias de seguridad</li>
                     <li>Creación de presupuestos y metas de ahorro</li>
                     <li>Gráficos avanzados y reportes personalizables</li>
-                    <li>Widget para un acceso aún más rápido</li>
+                    <li>Widget para un acceso aún más rápido desde tu pantalla de inicio</li>
                 </ul>
             </div>
         </section>
 
     </main>
 
-    <footer id="contact">
+    <footer id="contact" role="contentinfo">
         <p>Este proyecto está bajo la Licencia MIT.</p>
         <p>Desarrollado con ❤️ usando Android Studio y Kotlin.</p>
         <p>&copy; 2024 Kolki. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="assets/js/script.mjs"></script>
 </body>
 </html>
